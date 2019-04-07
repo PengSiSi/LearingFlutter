@@ -6,7 +6,7 @@ class CustomTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '学习Flutter',
+      title: '思思学习Flutter之路',
       home: _CustomTabBar(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -28,7 +28,7 @@ class _CustomTabBarState extends State<_CustomTabBar> {
  final List<Widget> _children = [
     HomePage(title: '首页'),
     HomePage(title: '首页'),
-    HomePage(title: '首页'),
+    HomePage(title: '朋友圈'),
     MyPage(title: '我的',)
   ];
 

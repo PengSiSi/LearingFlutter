@@ -1,6 +1,7 @@
 # flutter_booklet
 
-A new Flutter project.
+这个Flutter小册子作为思思学习Flutter学习的笔记。
+动手实践功能，学习别人开源项目代码。
 
 ## Getting Started
 
@@ -14,3 +15,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
+
+####学习记录
+2019-04-07：
+1> 搭建项目框架;
+
+
+

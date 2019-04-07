@@ -69,33 +69,36 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                   ),
                 )
               ),
-              Container(
-                width: double.infinity,
-                margin: EdgeInsets.only(top: 100.0),
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      '20', //weather.tmp,
-                      style:TextStyle(
-                        color: Colors.white,
-                        fontSize: 80.0
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: 100.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        '20', //weather.tmp,
+                        style:TextStyle(
+                          color: Colors.white,
+                          fontSize: 80.0
+                        )
+                      ),
+                      Text(
+                        '晴', //weather.cond,
+                        style:TextStyle(
+                          color: Colors.white,
+                          fontSize: 45.0
+                        )
+                      ),
+                      Text(
+                        '湿度 80%', //weather.hum,
+                        style:TextStyle(
+                          color: Colors.white,
+                          fontSize: 30.0
+                        )
                       )
-                    ),
-                    Text(
-                      '晴', //weather.cond,
-                      style:TextStyle(
-                        color: Colors.white,
-                        fontSize: 45.0
-                      )
-                    ),
-                    Text(
-                      '湿度 80%', //weather.hum,
-                      style:TextStyle(
-                        color: Colors.white,
-                        fontSize: 30.0
-                      )
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               )
             ],

@@ -1,6 +1,6 @@
- import 'package:flutter/material.dart';
-import './pages/weather/weatherWidget.dart';
-import './pages/city/cityWidget.dart';
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,8 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: '天气查询',
+      title: 'Boss直聘',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,11 +21,18 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        primaryIconTheme: const IconThemeData(color: Colors.white),
+        brightness: Brightness.light,
+        primaryColor: Color.fromARGB(255, 0, 215, 198),
+        accentColor: Colors.cyan[300],
       ),
-      home: CityPage()
+      home: SplashPage()
     );
   }
 }
+
+const timeout = const Duration(seconds: 3);
+const ms = Duration(microseconds: 1);
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -58,6 +64,18 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+
+    // 延迟方法
+    startTimeout(3000);
+  }
+
+  startTimeout(int microsecond) {
+    var duration = microsecond == null ? timeout :ms * microsecond;
+    return new Timer(duration, handleTimeout);
+  }
+
+  void handleTimeout() {
+    print("delay it");
   }
 
   @override
